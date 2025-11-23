@@ -1,0 +1,13 @@
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/RegistrationPageObject.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/utils/AppRestartHelper.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/factories/RegistrationPageObjectFactory.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/OnboardingPageObject.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/android/AndroidRegistrationPageObject.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/factories/OnboardingPageObjectFactory.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/MainPageObject.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/lib/Platform.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/ios/iOSRegistrationPageObject.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/ios/iOSOnboardingPageObject.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/lib/CoreTestCase.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/utils/IOSPermissionHandler.java
+/Users/petrkuznecov/Desktop/RuMobileTest/src/main/java/ui/android/AndroidOnboardingPageObject.java

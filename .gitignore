@@ -1,0 +1,5 @@
+apks/
+*.apk
+.DS_Store
+.idea/
+*.iml
