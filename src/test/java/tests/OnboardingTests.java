@@ -5,8 +5,8 @@ import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import lib.CoreTestCase;
 import org.junit.Test;
-import ui.OnboardingPageObject;
-import ui.factories.OnboardingPageObjectFactory;
+import ui.OnboardingPage;
+import ui.factories.OnboardingPageFactory;
 import utils.AppRestartHelper;
 
 
@@ -18,7 +18,7 @@ public class OnboardingTests extends CoreTestCase {
     @Description("Check the flow by pressing the buttons sequentially")
     @Step("Starting test testFlowOnboarding")
     public void testFlowOnboarding() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.waitForFirstScreen();
         onboardingPageObject.clickNextPageOnboarding();
         onboardingPageObject.waitForSecondScreen();
@@ -35,7 +35,7 @@ public class OnboardingTests extends CoreTestCase {
     @Description("Check the flow with scrolling on the start button")
     @Step("Starting test testSwipeOnboarding")
     public void testSwipeOnboarding() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.waitForFirstScreen();
         onboardingPageObject.swipeLeftToSecondScreen();
         onboardingPageObject.swipeLeftToThirdScreen();
@@ -49,7 +49,7 @@ public class OnboardingTests extends CoreTestCase {
     @Description("Checking the flow with the onboarding pass")
     @Step("Starting test testPassOnboarding")
     public void testPassOnboarding() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.waitForFirstScreen();
         onboardingPageObject.clickSkipOnboarding();
         onboardingPageObject.waitForTitleOnboardingScreenToDisappear("Получение займа до 7 минут на карту");
@@ -61,7 +61,7 @@ public class OnboardingTests extends CoreTestCase {
     @Description("")
     @Step("Starting test testRestartApp")
     public void testRestartApp() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.waitForFirstScreen();
         onboardingPageObject.clickSkipOnboarding();
 

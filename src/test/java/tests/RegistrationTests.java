@@ -2,39 +2,39 @@ package tests;
 
 import lib.CoreTestCase;
 import org.junit.Test;
-import ui.OnboardingPageObject;
-import ui.RegistrationPageObject;
-import ui.factories.OnboardingPageObjectFactory;
-import ui.factories.RegistrationPageObjectFactory;
+import ui.OnboardingPage;
+import ui.RegistrationPage;
+import ui.factories.OnboardingPageFactory;
+import ui.factories.RegistrationPageFactory;
 import utils.AppRestartHelper;
 
 public class RegistrationTests extends CoreTestCase {
 
     @Test
     public void testOpenRegistrationScreen() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
-        RegistrationPageObject registrationPageObject = RegistrationPageObjectFactory.get(driver);
+        RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.waitTextRegistrationScreen();
     }
 
     @Test
     public void testOpenSupportModal() {
         AppRestartHelper.restartApp(driver);
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
-        RegistrationPageObject registrationPageObject = RegistrationPageObjectFactory.get(driver);
+        RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openSupportBottomSheet();
         registrationPageObject.checkSupportModal();
     }
 
     @Test
     public void testCloseSupportModal() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
-        RegistrationPageObject registrationPageObject = RegistrationPageObjectFactory.get(driver);
+        RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openSupportBottomSheet();
         registrationPageObject.closeSupportModal();
         registrationPageObject.waitTextRegistrationScreen();
@@ -42,20 +42,20 @@ public class RegistrationTests extends CoreTestCase {
 
     @Test
     public void testOpenMenuModal() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
-        RegistrationPageObject registrationPageObject = RegistrationPageObjectFactory.get(driver);
+        RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openMenuModal();
         registrationPageObject.checkMenuModal();
     }
 
     @Test
     public void testCloseMenuModal() {
-        OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
+        OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
-        RegistrationPageObject registrationPageObject = RegistrationPageObjectFactory.get(driver);
+        RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openMenuModal();
         registrationPageObject.closeMenuModal();
         registrationPageObject.waitTextRegistrationScreen();

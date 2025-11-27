@@ -20,11 +20,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class MainPageObject {
+public abstract class BasePage {
 
     protected AppiumDriver driver;
 
-    public MainPageObject(AppiumDriver driver) {
+    public BasePage(AppiumDriver driver) {
         this.driver = driver;
     }
 

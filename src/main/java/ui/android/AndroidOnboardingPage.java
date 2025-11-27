@@ -1,9 +1,9 @@
 package ui.android;
 
 import io.appium.java_client.AppiumDriver;
-import ui.OnboardingPageObject;
+import ui.OnboardingPage;
 
-public class AndroidOnboardingPageObject extends OnboardingPageObject {
+public class AndroidOnboardingPage extends OnboardingPage {
     static {
         SKIP_ONBOARDING_BUTTON = "accessibility id:Пропустить";
         NEXT_ONBOARDING_BUTTON = "accessibility id:Продолжить";
@@ -16,7 +16,7 @@ public class AndroidOnboardingPageObject extends OnboardingPageObject {
         MAIN_PAGE_TITLE = "accessibility id:Добро пожаловать";
     }
 
-    public AndroidOnboardingPageObject(AppiumDriver driver) {
+    public AndroidOnboardingPage(AppiumDriver driver) {
         super(driver);
     }
 }

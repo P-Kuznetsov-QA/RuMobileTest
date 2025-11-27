@@ -3,7 +3,7 @@ package ui;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Step;
 
-public class RegistrationPageObject extends MainPageObject {
+public class RegistrationPage extends BasePage {
     protected static String
             SUPPORT_BOTTOM_SHEET,
             TITLE_CONTACT_US,
@@ -34,7 +34,7 @@ public class RegistrationPageObject extends MainPageObject {
             BACKGROUND_MASK;
 
 
-    public RegistrationPageObject(AppiumDriver driver) {
+    public RegistrationPage(AppiumDriver driver) {
         super(driver);
     }
 
