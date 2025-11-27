@@ -18,8 +18,9 @@ public class CoreTestCase extends TestCase {
 
     @Before
     @Step("Run driver and session")
-    protected void setUp() throws Exception {
+    public void setUp() throws Exception {
         driver = Platform.getInstance().getDriver();
+        this.createAllurePropertyFile();
         if (Platform.getInstance().isIOS()) {
             iosPermissionHandler = new IOSPermissionHandler(driver);
             iosPermissionHandler.handleAllPermissionAlerts(3); // пробуем обработать до 3 алертов подряд
@@ -28,7 +29,7 @@ public class CoreTestCase extends TestCase {
 
     @After
     @Step("Remove driver and session")
-    protected void tearDown() throws Exception {
+    public void tearDown() {
         driver.quit();
     }
 
