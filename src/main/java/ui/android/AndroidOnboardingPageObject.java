@@ -1,6 +1,5 @@
 package ui.android;
 
-
 import io.appium.java_client.AppiumDriver;
 import ui.OnboardingPageObject;
 
@@ -17,8 +16,7 @@ public class AndroidOnboardingPageObject extends OnboardingPageObject {
         MAIN_PAGE_TITLE = "accessibility id:Добро пожаловать";
     }
 
-    public AndroidOnboardingPageObject(AppiumDriver driver)
-    {
+    public AndroidOnboardingPageObject(AppiumDriver driver) {
         super(driver);
     }
 }

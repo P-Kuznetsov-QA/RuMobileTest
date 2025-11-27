@@ -16,8 +16,7 @@ public class iOSOnboardingPageObject extends OnboardingPageObject {
         MAIN_PAGE_TITLE = "accessibility id:Добро пожаловать";
     }
 
-    public iOSOnboardingPageObject(AppiumDriver driver)
-    {
+    public iOSOnboardingPageObject(AppiumDriver driver) {
         super(driver);
     }
 }

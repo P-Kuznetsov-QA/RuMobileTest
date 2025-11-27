@@ -8,12 +8,11 @@ import ui.ios.iOSOnboardingPageObject;
 
 public class OnboardingPageObjectFactory {
 
-    public static OnboardingPageObject get(AppiumDriver driver)
-    {
-        if (Platform.getInstance().isAndroid()){
+    public static OnboardingPageObject get(AppiumDriver driver) {
+        if (Platform.getInstance().isAndroid()) {
             System.out.println("Creating AndroidOnboardingPageObject");
             return new AndroidOnboardingPageObject(driver);
-        } else  {
+        } else {
             System.out.println("Creating IOSOnboardingPageObject");
             return new iOSOnboardingPageObject(driver);
         }

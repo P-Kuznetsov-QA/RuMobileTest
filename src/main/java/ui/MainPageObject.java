@@ -3,7 +3,6 @@ package ui;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.qameta.allure.Attachment;
-import lib.Platform;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -287,28 +286,26 @@ public class MainPageObject {
 
     }
 
-    public String takeScreenshot(String name)
-    {
+    public String takeScreenshot(String name) {
         TakesScreenshot ts = (TakesScreenshot) this.driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        String path = System.getProperty("user.dir") + "/" + name +"_screenshot.png";
+        String path = System.getProperty("user.dir") + "/" + name + "_screenshot.png";
         try {
             FileUtils.copyFile(source, new File(path));
             System.out.println("The screenshot was taken :" + path);
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Cannot take screenshor. Error: " + e.getMessage());
         }
         return path;
     }
 
     @Attachment
-    public static byte[] screenshot(String path)
-    {
+    public static byte[] screenshot(String path) {
         byte[] bytes = new byte[0];
 
         try {
             bytes = Files.readAllBytes(Paths.get(path));
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Cannot get bytes from screenshot. Error " + e.getMessage());
         }
         return bytes;

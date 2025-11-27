@@ -32,8 +32,7 @@ public class CoreTestCase extends TestCase {
         driver.quit();
     }
 
-    private void createAllurePropertyFile()
-    {
+    private void createAllurePropertyFile() {
         String path = System.getProperty("allure.results.directory");
         try {
             Properties props = new Properties();
@@ -41,7 +40,7 @@ public class CoreTestCase extends TestCase {
             props.setProperty("Environment", Platform.getInstance().getPlatformVar());
             props.store(fos, "See https://docs.qameta.io/allure/#_environment");
             fos.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("IO problem when writing allure properties file");
             e.printStackTrace();
         }

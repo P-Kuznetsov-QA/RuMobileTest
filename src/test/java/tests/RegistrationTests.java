@@ -11,7 +11,7 @@ import utils.AppRestartHelper;
 public class RegistrationTests extends CoreTestCase {
 
     @Test
-    public void testOpenRegistrationScreen(){
+    public void testOpenRegistrationScreen() {
         OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
@@ -20,7 +20,7 @@ public class RegistrationTests extends CoreTestCase {
     }
 
     @Test
-    public void testOpenSupportModal(){
+    public void testOpenSupportModal() {
         AppRestartHelper.restartApp(driver);
         OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
@@ -30,7 +30,7 @@ public class RegistrationTests extends CoreTestCase {
     }
 
     @Test
-    public void testCloseSupportModal(){
+    public void testCloseSupportModal() {
         OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
@@ -41,7 +41,7 @@ public class RegistrationTests extends CoreTestCase {
     }
 
     @Test
-    public void testOpenMenuModal(){
+    public void testOpenMenuModal() {
         OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 
@@ -51,7 +51,7 @@ public class RegistrationTests extends CoreTestCase {
     }
 
     @Test
-    public void testCloseMenuModal(){
+    public void testCloseMenuModal() {
         OnboardingPageObject onboardingPageObject = OnboardingPageObjectFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
 

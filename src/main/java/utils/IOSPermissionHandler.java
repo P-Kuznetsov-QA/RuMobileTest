@@ -5,6 +5,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.*;
 
 public class IOSPermissionHandler {
@@ -98,29 +99,11 @@ public class IOSPermissionHandler {
      */
     private String decideButtonToClick(String alertText, List<String> availableButtons) {
         // варианты русских (и некоторые англ.) меток для геолокации, уведомлений и т.п.
-        List<String> locationCandidates = Arrays.asList(
-                "Разрешить при использовании приложения",
-                "При использовании приложения",
-                "При использовании",
-                "Разрешить в любое время",
-                "Всегда",
-                "Разрешить всегда",
-                "Разрешить при использовании"
-        );
+        List<String> locationCandidates = Arrays.asList("Разрешить при использовании приложения", "При использовании приложения", "При использовании", "Разрешить в любое время", "Всегда", "Разрешить всегда", "Разрешить при использовании");
 
-        List<String> notificationsCandidates = Arrays.asList(
-                "Разрешить",
-                "Разрешить отправлять уведомления",
-                "Разрешать уведомления"
-        );
+        List<String> notificationsCandidates = Arrays.asList("Разрешить", "Разрешить отправлять уведомления", "Разрешать уведомления");
 
-        List<String> denyCandidates = Arrays.asList(
-                "Не разрешать",
-                "Запретить",
-                "Отклонить",
-                "Не сейчас",
-                "Не разрешать"
-        );
+        List<String> denyCandidates = Arrays.asList("Не разрешать", "Запретить", "Отклонить", "Не сейчас", "Не разрешать");
 
         List<String> okCandidates = Arrays.asList("OK", "Хорошо", "Понятно");
 

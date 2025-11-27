@@ -39,33 +39,29 @@ public class RegistrationPageObject extends MainPageObject {
     }
 
     /* TEMPLATES METHODS */
-    private static String getErrorMessageLength(String length)
-    {
+    private static String getErrorMessageLength(String length) {
         return VALIDATION_ERROR_FIELD_LENGTH_BY_TPL.replace("{LENGTH}", length);
     }
-    private static String getResultEnteringPhoneNumber(String phone_number)
-    {
+
+    private static String getResultEnteringPhoneNumber(String phone_number) {
         return ENTER_PHONE_NUMBER_BY_TPL.replace("{PHONE}", phone_number);
     }
     /* TEMPLATES METHODS */
 
     @Step("Waiting for the text of the Registration screen")
-    public void waitTextRegistrationScreen()
-    {
+    public void waitTextRegistrationScreen() {
         this.waitForElementForPresent(PSK_TEXT, "Cannot find text 'PSK' " + PSK_TEXT, 5);
         this.waitForElementForPresent(WELCOME_TITLE, "Cannot find text 'Welcome Title' " + WELCOME_TITLE, 5);
         this.waitForElementForPresent(LOGIN_OR_REGISTRATION_PROMPT, "Cannot find text 'Login or Registration promt' " + LOGIN_OR_REGISTRATION_PROMPT, 5);
     }
 
     @Step("Opening the Support modal")
-    public void openSupportBottomSheet()
-    {
+    public void openSupportBottomSheet() {
         this.waitForElementAndClick(SUPPORT_BOTTOM_SHEET, "Cannot find and click open Support modal button", 5);
     }
 
     @Step("Checking text the Support modal")
-    public void checkSupportModal()
-    {
+    public void checkSupportModal() {
         this.waitForElementForPresent(TITLE_CONTACT_US, "Cannot find text title 'contact us' :" + TITLE_CONTACT_US, 5);
         this.waitForElementForPresent(TEXT_SUPPORT_HOURS, "Cannot find text 'support hours work' :" + TEXT_SUPPORT_HOURS, 5);
         this.waitForElementForPresent(CALL_US_BUTTON, "Cannot find 'Call us' button :" + CALL_US_BUTTON, 5);
@@ -77,24 +73,23 @@ public class RegistrationPageObject extends MainPageObject {
     }
 
     @Step("Closing the Support modal")
-    public void closeSupportModal()
-    {
+    public void closeSupportModal() {
         this.waitForElementAndClick(CLOSE_SUPPORT_BOTTOM_SHEET, "Cannot find and click close bottom sheet", 5);
     }
 
     @Step("Opening the Menu modal")
-    public void openMenuModal(){
+    public void openMenuModal() {
         this.waitForElementAndClick(MENU_BOTTOM_SHEET, "Cannot find and click open Menu modal button", 5);
     }
 
     @Step("Checking text the Menu modal")
-    public void checkMenuModal(){
+    public void checkMenuModal() {
         this.waitForElementForPresent(DOCUMENTS_BOTTOM, "Cannot find 'Documents' button", 5);
         this.waitForElementForPresent(ABOUT_THE_COMPANY_BUTTON, "Cannot find 'About the company' button", 5);
     }
 
     @Step("Closing the Menu modal")
-    public void closeMenuModal(){
+    public void closeMenuModal() {
         this.waitForElementAndClick(CLOSE_MENU_BOTTOM_SHEET, "Cannot find and click close bottom sheet", 5);
     }
 }
