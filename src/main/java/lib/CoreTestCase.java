@@ -5,6 +5,7 @@ import io.qameta.allure.Step;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
+import utils.AppRestartHelper;
 import utils.IOSPermissionHandler;
 
 import java.io.FileOutputStream;
@@ -33,6 +34,7 @@ public class CoreTestCase extends TestCase {
         driver.quit();
     }
 
+    @Step("Creating environment properties for an Allure report")
     private void createAllurePropertyFile() {
         String path = System.getProperty("allure.results.directory");
         try {
@@ -45,5 +47,10 @@ public class CoreTestCase extends TestCase {
             System.out.println("IO problem when writing allure properties file");
             e.printStackTrace();
         }
+    }
+
+    @Step("Restart application")
+    protected void restartApp() {
+        AppRestartHelper.restartApp(this.driver);
     }
 }
