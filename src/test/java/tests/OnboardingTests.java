@@ -7,7 +7,6 @@ import lib.CoreTestCase;
 import org.junit.Test;
 import ui.OnboardingPage;
 import ui.factories.OnboardingPageFactory;
-import utils.AppRestartHelper;
 
 
 public class OnboardingTests extends CoreTestCase {
@@ -58,15 +57,13 @@ public class OnboardingTests extends CoreTestCase {
 
     @Test
     @DisplayName("Restart app")
-    @Description("")
+    @Description("We check that after completing the boarding, it will no longer be displayed in the next restart")
     @Step("Starting test testRestartApp")
     public void testRestartApp() {
         OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.waitForFirstScreen();
         onboardingPageObject.clickSkipOnboarding();
-
-        AppRestartHelper.restartApp(driver);
-        onboardingPageObject.waitForSecondScreen();
+        restartApp();
         onboardingPageObject.waitForMainPage();
     }
 }
