@@ -69,9 +69,9 @@ public class Platform {
         return capabilities;
     }
 
-    private boolean isPlatform(String my_platform) {
+    private boolean isPlatform(String myPlatform) {
         String platform = this.getPlatformVar();
-        return my_platform.equals(platform);
+        return myPlatform.equals(platform);
     }
 
     public String getPlatformVar() {
