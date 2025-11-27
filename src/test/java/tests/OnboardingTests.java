@@ -10,8 +10,6 @@ import ui.factories.OnboardingPageFactory;
 
 
 public class OnboardingTests extends CoreTestCase {
-
-
     @Test
     @DisplayName("Click start button")
     @Description("Check the flow by pressing the buttons sequentially")

@@ -9,12 +9,10 @@ import ui.factories.RegistrationPageFactory;
 import utils.AppRestartHelper;
 
 public class RegistrationTests extends CoreTestCase {
-
     @Test
     public void testOpenRegistrationScreen() {
         OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
-
         RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.waitTextRegistrationScreen();
     }
@@ -33,7 +31,6 @@ public class RegistrationTests extends CoreTestCase {
     public void testCloseSupportModal() {
         OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
-
         RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openSupportBottomSheet();
         registrationPageObject.closeSupportModal();
@@ -44,7 +41,6 @@ public class RegistrationTests extends CoreTestCase {
     public void testOpenMenuModal() {
         OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
-
         RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openMenuModal();
         registrationPageObject.checkMenuModal();
@@ -54,7 +50,6 @@ public class RegistrationTests extends CoreTestCase {
     public void testCloseMenuModal() {
         OnboardingPage onboardingPageObject = OnboardingPageFactory.get(driver);
         onboardingPageObject.clickSkipOnboarding();
-
         RegistrationPage registrationPageObject = RegistrationPageFactory.get(driver);
         registrationPageObject.openMenuModal();
         registrationPageObject.closeMenuModal();

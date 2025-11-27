@@ -113,7 +113,7 @@ public class IOSPermissionHandler {
         if (lc.contains("местополож") || lc.contains("геопозици") || lc.contains("определять ваше местополож")) {
             String found = findFirstPresent(locationCandidates, availableButtons);
             if (found != null) return found;
-        } else if (lc.contains("уведомлен") || lc.contains("уведомлен") || lc.contains("уведомления")) {
+        } else if (lc.contains("уведомлен") || lc.contains("уведомления")) {
             String found = findFirstPresent(notificationsCandidates, availableButtons);
             if (found != null) return found;
         } else if (lc.contains("камера") || lc.contains("фото") || lc.contains("микрофон")) {
