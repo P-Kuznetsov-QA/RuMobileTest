@@ -1,5 +1,18 @@
+# Mobile development
 apks/
 *.apk
-.DS_Store
+
+# IDE
 .idea/
+*.iws
 *.iml
+*.ipr
+
+# Build output
+target/
+build/
+out/
+
+# Other
+*.log
+.DS_Store
