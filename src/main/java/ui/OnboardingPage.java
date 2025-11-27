@@ -3,7 +3,7 @@ package ui;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Step;
 
-abstract public class OnboardingPage extends BasePage {
+public class OnboardingPage extends BasePage {
 
     protected static String
             SKIP_ONBOARDING_BUTTON,
